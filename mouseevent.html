@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+</head>
+<body>
+    <button onmouseover="over()" onmouseout="out()">mouse over/out</button>
+    <button onmouseenter="enter()" onmouseleave="leave()">mouse enter/leave</button>
+    <button onmousemove="move()">mouse move</button>
+    <button onmousewheel="wheel()">mouse wheel</button>
+    <button ondblclick="double()">Double click</button>
+    <button oncontextmenu="right()">right click</button>
+    <button onmouseup="up()">mouse up</button>
+    <button onmousedown="down()">mouse down</button>
+
+    <select name="" id="no" onchange="change()">
+        <option value="">please select</option>
+        <option value="first">first</option>
+        <option value="second">second</option>
+        <option value="third">third</option>
+    </select>
+
+    <script>
+        function over() {
+           document.body.style.backgroundColor = "red";
+        }
+        function out(){
+            document.body.style.backgroundColor = "yellow";
+        }
+        function enter(){
+            document.body.style.backgroundColor = "pink";
+        }
+        function leave(){
+            document.body.style.backgroundColor = "green";
+        }
+        function move(){
+            document.body.style.backgroundColor = "skyblue";
+        }
+        function wheel(){
+            document.body.style.backgroundColor = "orange";
+        }
+        function double(){
+            document.body.style.backgroundColor = "yellow";
+        }
+        function right(){
+            document.body.style.backgroundColor = "orange";
+        }
+        function up(){
+            document.body.style.backgroundColor = "gray";
+        }
+        function down(){
+            document.body.style.backgroundColor = "blue";
+        }
+
+        function change(){
+            let no = document.getElementById("no").value;
+            alert("You Selected :" +" "+no);
+        }
+
+    </script>
+</body>
+</html>
